@@ -1,16 +1,10 @@
 import React, { useState, useContext } from "react";
 import axios from "axios";
-// import {LyricsContext} from "./Helpers/context"
-// import "../styles/lyrics.css";
 function Lyrics() {
-  //creating a state to store the lyrics of a song
+
   const [lyrics, setLyrics] = useState("Loading...");
   const [track, setTrack] = useState();
   const [artist, setArtist] = useState();
-  //to use contesxt
-  // const AppContext=useContext(LyricsContext)//Since appContext can be null, you need to handle that case
-
-  // const{artist,track,searchState,setLyricsState}=LyricsContext
 
   //function to frtch data from API
   function getlyrics() {
@@ -28,11 +22,7 @@ function Lyrics() {
       });
     console.log("done");
   }
-  //to check if user has searched for a new lyrics
-  // if(searchState===true)
-  // {
-  //    getlyrics();
-  // }
+
   return (
     <div className="lyrics">
       <div className="titles">
